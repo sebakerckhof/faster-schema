@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Comparison with Simple-Schema and Superstruct](#comparison-with-simple-schema-and-superstruct)
+  - [Performance comparison](#performance-comparison)
+  - [Feature comparison](#feature-comparison)
+  - [API differences with Simple-Schema](#api-differences-with-simple-schema)
+    - [Simple-Schema v1](#simple-schema-v1)
+    - [AutoValue & Custom validators](#autovalue--custom-validators)
+- [Asynchronous validation](#asynchronous-validation)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Comparison with Simple-Schema and Superstruct
 
 ## Performance comparison

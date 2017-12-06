@@ -1,4 +1,14 @@
-const FasterSchema = require('./dist/FasterSchema').default;
+const FasterSchema = require('../dist/FasterSchema').default;
+
+const schema = new FasterSchema({
+  int: FasterSchema.Integer,
+  string: String,
+});
+debugger;
+schema.validate({ int: '5' });
+
+
+//
 const toTest = require('./test.json');
 const {
   recordingState,

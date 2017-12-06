@@ -19,7 +19,7 @@
   ],
   "main": "./dist/index.js",
   "scripts": {
-    "build": "rm -rf dist/** && babel lib --source-maps --out-dir dist --ignore *.spec.js,testHelpers/*",
+    "build": "rm -rf dist/** && babel lib --out-dir dist --ignore *.spec.js,testHelpers/*,examples/*",
     "lint": "eslint .",
     "prepare": "npm run lint && npm test && npm run build",
     "test": "mocha --compilers js:babel-core/register --recursive \"lib/**/*.spec.js\"",

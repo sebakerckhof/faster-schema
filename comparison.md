@@ -7,8 +7,14 @@
   - [Feature comparison](#feature-comparison)
   - [API differences with Simple-Schema](#api-differences-with-simple-schema)
     - [Simple-Schema v1](#simple-schema-v1)
-    - [AutoValue & Custom validators](#autovalue--custom-validators)
-- [Asynchronous validation](#asynchronous-validation)
+    - [Custom data types](#custom-data-types)
+    - [Custom field definitions](#custom-field-definitions)
+    - [AutoValue functions](#autovalue-functions)
+    - [Custom validators](#custom-validators)
+    - [Schema merging](#schema-merging)
+    - [Schema extacting](#schema-extacting)
+    - [Custom error messages](#custom-error-messages)
+    - [Asynchronous validation](#asynchronous-validation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

@@ -1,6 +1,6 @@
 {
   "name": "faster-schema",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A schema validation package.",
   "author": "Sebastian Kerckhof <seba.kerckhof@gmail.com>",
   "license": "MIT",

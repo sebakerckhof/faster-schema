@@ -17,8 +17,8 @@
 ## Performance comparison
 | Action                         | Faster-Schema                  | Simple-Schema                 | Superstruct                    |
 |-----------------------------------|--------------------------------|-------------------------------|--------------------------------|
-| Cleaning performance advanced example   | ~60ms | ~2000ms | /     |
-| Validation performance advanced example | ~50ms | ~900ms  | ~30ms |
+| Cleaning performance advanced example   | ~20ms | ~1600ms | /     |
+| Validation performance advanced example | ~30ms | ~700ms  | ~17ms |
 
 ## Feature comparison
 | Feature                           | Faster-Schema                  | Simple-Schema                 | Superstruct                    |
@@ -135,6 +135,8 @@ custom ({value, parentObj}){
   }
 }
 ```
+
+**note** that `Simple-Schema` will call custom validators on fields that are not defined. `Faster-Schema`
 
 ### Schema merging
 `Simple-Schema` v2 gives you no easy way to create a new schema by merging existing schemas together.

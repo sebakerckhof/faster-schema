@@ -782,21 +782,14 @@ All custom validation functions work the same way. First, do the necessary custo
 * If you return a built-in string, it's best to use the `FasterSchema.ErrorTypes` constants.
 * If you return a custom string, you'll usually want to [define a message for it](#customizing-validation-messages).
 
-Within your custom validation function, `this` provides the following properties:
-* `key`: The name of the schema key (e.g., "addresses.0.street")
-* `genericKey`: The generic name of the schema key (e.g., "addresses.$.street")
+The custom validator receives an object as first parameter containing:
+
+* `path`: The name of the schema path (e.g., "addresses.0.street")
+* `genericPath`: The generic name of the schema key (e.g., "addresses.$.street")
 * `definition`: The schema definition object.
-* `isSet`: Does the object being validated have this key set?
-* `value`: The value to validate.
-* `operator`: The Mongo operator for which we're doing validation. Might be `null`.
-* `validationContext`: The current `ValidationContext` instance
-* `field()`: Use this method to get information about other fields. Pass a field name (non-generic schema key) as the only argument. The return object will have `isSet`, `value`, and `operator` properties for that field.
-* `siblingField()`: Use this method to get information about other fields that have the same parent object. Works the same way as `field()`. This is helpful when you use sub-schemas or when you're dealing with arrays of objects.
-* `addValidationErrors(errors)`: Call this to add validation errors for any key. In general, you should use this to add errors for other keys. To add an error for the current key, return the error type string. If you do use this to add an error for the current key, return `false` from your custom validation function.
-
-NOTE: If you need to do some custom validation on the server and then display errors back
-on the client, refer to the [Asynchronous Custom Validation on the Client](#asynchronous-custom-validation-on-the-client) section.
-
+* `rootObj`: The complete object to validate
+* `parentObj`: The current field's parent object, useful to get siblin values
+* `value`: The value to validate
 ### Custom Whole-Document Validators
 
 Add a validator for all schemas:

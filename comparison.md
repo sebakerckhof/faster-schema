@@ -98,14 +98,14 @@ So this field may or may not be cleaned already depending on the order of fields
 Example:
 ```js
 // Simple-Schema
-custom (){
+autoValue (){
   if (this.value !== this.getSiblingField('otherfield').value) {
     return 'shouldBeSame';
   }
 }
 
 // Faster-Schema
-custom ({value, getSiblingValue}){
+autoValue ({value, getSiblingValue}){
   if (value !== getSiblingValue('otherfield')) {
     return 'shouldBeSame';
   }
@@ -155,7 +155,7 @@ E.g.
 new SimpleSchema([schema1, schema2, {...}]);
 
 // Faster-Schema
-FasterSchema.mege(schema1, schema2, {...});
+FasterSchema.merge(schema1, schema2, {...});
 ```
 ### Schema extacting
 The `pick` and `omit` methods accept a comma seperated list of values to pick or omit, but not an array.

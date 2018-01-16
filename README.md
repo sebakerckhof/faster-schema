@@ -6,7 +6,7 @@ FasterSchema validates JavaScript objects to ensure they match a schema. It can 
 Note that this package is very new and the API might change.
 
 This package is mainly meant as a limited, but faster alternative to [SimpleSchema](https://github.com/aldeed/simple-schema-js/), with a very similar API. [Here's a complete comparison](comparison.md).
-In short: the main difference is that this package doesn't support validating against mongoDB modifiers. But in our [tests](https://github.com/sebakerckhof/schema-comparison) on an advanced schema with a large object, it is about ~20x faster for validation and ~50x faster for cleaning of data.
+In short: the main difference is that this package doesn't support validating against mongoDB modifiers. But in return it is much faster for advanced scenarios. In our [tests](https://github.com/sebakerckhof/schema-comparison) on an advanced schema with a large object, it is about ~20x faster for validation and ~50x faster for cleaning of data.
 
 There are a lot of similar packages for validating objects. These are some of the features of this package that might be good reasons to choose this one over another:
 - Isomorphic. Works in NodeJS and modern (evergreen) browsers.

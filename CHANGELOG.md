@@ -10,6 +10,10 @@
 
 # faster-schema CHANGELOG
 
+## 0.0.10 (12-03-2018)
+
+Cleaning an object now also cleans values not in the 'allowedValues' list.
+
 ## 0.0.4 (07-12-2017)
 
 Various small fixes

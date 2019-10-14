@@ -938,8 +938,8 @@ optional, and then use a custom function similar to this:
   field: {
     type: String,
     optional: true,
-    custom: function ({value, isSet, getValue}) {
-      let shouldBeRequired = getValue('saleType') === 1;
+    custom: function ({value, isSet, parentObj}) {
+      let shouldBeRequired = parentObj.saleType === 1;
       if (shouldBeRequired) {
         if (!isSet || value === null || value === "") return FasterSchema.ErrorTypes.REQUIRED;
       }

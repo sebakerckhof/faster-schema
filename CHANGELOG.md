@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [faster-schema CHANGELOG](#faster-schema-changelog)
+  - [1.0.1 (14-10-2019)](#101-14-10-2019)
   - [1.0.0 (09-10-2019)](#100-09-10-2019)
   - [0.0.19 (09-10-2019)](#0019-09-10-2019)
   - [0.0.18 (07-06-2019)](#0018-07-06-2019)
@@ -18,6 +19,11 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # faster-schema CHANGELOG
+
+## 1.0.1 (14-10-2019)
+
+- Don't throw when returning a custom error type that has not been defined
+
 
 ## 1.0.0 (09-10-2019)
 

@@ -956,13 +956,15 @@ Here's an example of declaring one value valid or invalid based on another
 value using a custom validation function.
 
 ```js
-FasterSchema.messageBox.messages({
-  en: {
-    passwordMismatch(){ return 'Passwords do not match' },
+FasterSchema.setDefaultMessages({
+  messages: {
+    en: {
+      passwordMismatch(){ return 'Passwords do not match' },
+    },
   },
 });
 
-MySchema = new FasterSchema({
+const MySchema = new FasterSchema({
   password: {
     type: String,
     label: "Enter a password",
@@ -972,8 +974,8 @@ MySchema = new FasterSchema({
     type: String,
     label: "Enter the password again",
     min: 8,
-    custom({value, getValue}) {
-      if (value !== getValue('password')) {
+    custom({ value, parentObj }) {
+      if (value !== parentObj.password) {
         return "passwordMismatch";
       }
     },

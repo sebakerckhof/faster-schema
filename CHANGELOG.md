@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [faster-schema CHANGELOG](#faster-schema-changelog)
+  - [2.0.0 (07-12-2020)](#200-07-12-2020)
   - [1.0.1 (14-10-2019)](#101-14-10-2019)
   - [1.0.0 (09-10-2019)](#100-09-10-2019)
   - [0.0.19 (09-10-2019)](#0019-09-10-2019)
@@ -19,6 +20,15 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # faster-schema CHANGELOG
+
+## 2.0.0 (07-12-2020)
+
+- Fix filter and getAutoValue clean options
+
+**Breaking change**
+Some auto values may not have been filled in correctly before.
+This impacts the default behavior from the clean function.
+
 
 ## 1.0.1 (14-10-2019)
 

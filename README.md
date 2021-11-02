@@ -585,7 +585,8 @@ The `FasterSchema.RegEx` object defines standard regular expressions you can use
 
 ### blackbox
 
-If you have a key with type `Object`, the properties of the object will be validated as well, so you must define all allowed properties in the schema. If this is not possible or you don't care to validate the object's properties, use the `blackbox: true` option to skip validation for everything within the object.
+If you have a key with type `Object` or `Array`, the properties will be validated as well, so you must define all allowed properties in the schema. If this is not possible or you don't care to validate these properties, use the `blackbox: true` option to skip validation for everything within the object/array.
+
 
 ### trim
 
